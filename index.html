@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Make a Wish ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="candle.css">
+</head>
+<body>
+
+<div class="page">
+  <h1 class="headline">
+    happy birthday<br>
+    <span>my favourite person ❤️</span>
+  </h1>
+
+  <p class="subtext">make a wish & blow the candle ✨</p>
+
+  <div class="cake-wrap">
+    <div class="cake">🎂</div>
+    <div class="flame" id="flame">
+      <div class="outer"></div>
+      <div class="inner"></div>
+    </div>
+  </div>
+
+  <div class="meter">
+    <i id="meter"></i>
+  </div>
+
+  <div class="controls">
+    <button class="secondary" id="micBtn">enable mic</button>
+    <button id="blowBtn">blow candle</button>
+  </div>
+</div>
+
+<audio id="music" src="birthday.mp3" preload="auto"></audio>
+<script src="candle.js"></script>
+</body>
+</html>

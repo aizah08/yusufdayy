@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Favourite Person 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  background:#fff6ec;
+  font-family:'Patrick Hand', cursive;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* HEADINGS */
+.heading{
+  position:absolute;
+  top:60px;
+  left:80px;
+  font-size:34px;
+}
+
+.sub{
+  position:absolute;
+  top:110px;
+  left:80px;
+  font-size:36px;
+  color:#ff4d6d;
+}
+
+/* DATE */
+.date{
+  position:absolute;
+  top:60px;
+  right:120px;
+  background:white;
+  border:2px dashed #dbeafe;
+  padding:10px 16px;
+  text-align:center;
+}
+
+.date .month{font-size:16px;}
+.date .day{
+  font-size:28px;
+  color:#ff4d6d;
+}
+
+/* SCRAPBOOK CARD */
+.card{
+  position:absolute;
+  width:260px;
+  background:white;
+  padding:10px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:4px;
+}
+
+/* CAPTION */
+.card p{
+  margin:10px 0 4px;
+  font-size:20px;
+  text-align:center;
+}
+
+/* INDIVIDUAL CARDS */
+.card.one{
+  top:260px;
+  left:140px;
+  transform:rotate(-6deg);
+  border:3px solid #cfe3ff;
+}
+
+.card.two{
+  top:260px;
+  left:430px;
+  transform:rotate(2deg);
+  border:3px solid #ffd6e6;
+}
+
+.card.three{
+  top:260px;
+  left:720px;
+  transform:rotate(-3deg);
+  border:3px solid #ff4d6d;
+}
+
+/* HOVER */
+.card:hover{
+  transform:rotate(0deg) scale(1.05);
+  z-index:10;
+}
+</style>
+</head>
+
+<body>
+
+<div class="heading">Hai, this is for you</div>
+<div class="sub">my favourite person ❤️</div>
+
+<div class="date">
+  <div class="month">January</div>
+  <div class="day">31 ✨</div>
+</div>
+
+<!-- CARD 1 -->
+<div class="card one">
+  <img src="images/photo-right.jpg">
+  <p>my safest place.</p>
+</div>
+
+<!-- CARD 2 -->
+<div class="card two">
+  <img src="images/photo-middle.jpg">
+  <p>still the cutest.</p>
+</div>
+
+<!-- CARD 3 -->
+<div class="card three">
+  <img src="images/photo-left.jpg">
+  <p>us, always.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --pink:#ffd6e6;
+      --blue:#dbeafe;
+      --red:#ff4d6d;
+      --beige:#fff6ec;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      background:var(--beige);
+      font-family:'Patrick Hand', cursive;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:20px;
+    }
+
+    /* 📖 Book */
+    .book{
+      position:relative;
+      width:100%;
+      max-width:800px;
+      perspective:1400px;
+    }
+
+    .page{
+      position:absolute;
+      width:100%;
+      top:0;
+      left:0;
+      transform-origin:left;
+      transition:transform 1.2s ease;
+    }
+
+    /* 📕 Cover */
+    .cover{
+      background:linear-gradient(135deg,var(--pink),var(--blue));
+      padding:90px 20px;
+      border-radius:20px;
+      text-align:center;
+      cursor:pointer;
+      z-index:2;
+      box-shadow:0 25px 50px rgba(0,0,0,.25);
+    }
+
+    .cover h2{
+      font-family:'Playfair Display', serif;
+      font-size:34px;
+      margin-bottom:10px;
+    }
+
+    .cover p{
+      font-size:18px;
+      color:#555;
+    }
+
+    /* 📄 Inner page */
+    .content{
+      z-index:1;
+    }
+
+    .paper{
+      background:white;
+      border-radius:20px;
+      padding:40px 30px 50px;
+      box-shadow:0 20px 45px rgba(0,0,0,.15);
+      border:3px dashed var(--pink);
+      position:relative;
+    }
+
+    /* Title */
+    .title{
+      text-align:center;
+      font-family:'Playfair Display', serif;
+      font-size:32px;
+      margin-bottom:25px;
+    }
+
+    .title span{
+      color:var(--red);
+    }
+
+    /* Letter text */
+    .letter{
+      font-size:18px;
+      line-height:1.7;
+      margin:12px 0;
+      color:#444;
+    }
+
+    .highlight{
+      font-size:22px;
+      color:var(--red);
+    }
+
+    .bold{
+      font-weight:bold;
+    }
+
+    .final{
+      margin-top:28px;
+      text-align:center;
+      font-size:22px;
+      color:var(--red);
+    }
+
+    .signature{
+      margin-top:20px;
+      text-align:right;
+      font-size:18px;
+      color:#555;
+    }
+
+    /* Doodles */
+    .doodle{
+      position:absolute;
+      font-size:28px;
+    }
+
+    .heart{
+      color:var(--red);
+      top:-15px;
+      left:-15px;
+    }
+
+    .star{
+      color:#facc15;
+      bottom:-15px;
+      right:30px;
+    }
+
+    .arrow{
+      color:#22c55e;
+      top:50%;
+      right:-15px;
+    }
+
+    /* Page turn */
+    .book.open .cover{
+      transform:rotateY(-180deg);
+    }
+  </style>
+</head>
+<body>
+
+<div class="book" id="book">
+
+  <!-- COVER -->
+  <div class="page cover" id="cover">
+    <h2>for you ❤️</h2>
+    <p>tap to open</p>
+  </div>
+
+  <!-- LETTER PAGE -->
+  <div class="page content">
+    <div class="paper">
+
+      <h1 class="title">
+        happy birthday<br>
+        <span>baby ❤️</span>
+      </h1>
+
+      <p class="letter">hey love,</p>
+
+      <p class="letter">
+        happy birthday!!!!  
+        ok it’s gonna be a long one…
+      </p>
+
+      <p class="letter">
+        i can’t tell you how special you are to me. baby you are perfect in every way possible except a few (hehe).
+      </p>
+
+      <p class="letter">
+        you are my first in everything and i want you to be the last as well. sounds cringe but yes baby.
+      </p>
+
+      <p class="letter highlight">
+        you feel like home to me.
+      </p>
+
+      <p class="letter">
+        all the moments i have spent with you are nothing but special.
+      </p>
+
+      <p class="letter">
+        i promise to be by your side always and forever ❤️
+      </p>
+
+      <p class="letter">
+        i promise i’ll spoil you when i earn (abhi little poor hu 😭).
+      </p>
+
+      <p class="letter">
+        apke liye khana banana bhi seekh lungi — woh bhi high protein wala!!!
+      </p>
+
+      <p class="letter">
+        just so you know:
+      </p>
+
+      <p class="letter">
+        i find you sexy and hot af.
+      </p>
+
+      <p class="letter">
+        bohut gande thoughts hei apko leke (ache way mei pakka).
+      </p>
+
+      <p class="letter">
+        mera bas chale toh mei apko roz celebrate karu baby, you are that special to me.
+      </p>
+
+      <p class="letter">
+        i can’t tell you how much you mean to me in words but…
+      </p>
+
+      <p class="final">
+        YUSUF I LOVE YOU MORE THAN YOU KNOW ❤️
+      </p>
+
+      <div class="signature">
+        — yours aizuu
+      </div>
+
+      <!-- doodles -->
+      <span class="doodle heart">❤</span>
+      <span class="doodle star">★</span>
+      <span class="doodle arrow">➜</span>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  document.getElementById("cover").onclick = () => {
+    document.getElementById("book").classList.add("open");
+  };
+</script>
+
+</body>
+</html>
